@@ -1,0 +1,69 @@
+1. Download and unzip ExtraPuTTY.
+- http://www.extraputty.com/download.php
+
+2. Create and download security credentials through IAM on the AWS console.
+
+3. Create and download a key pair named TU_Dublin in .pem format on the AWS console.
+
+4. Convert the keypair to .ppk format using PuTTYgen.
+
+5. Create an EC2 instance and estimate cost through CloudFormation on the AWS console.
+- cloudformation-demo-main\demo_cf_01\template.yaml
+
+6. Add an SSH access rule to the default security group.
+
+7. Connect to the EC2 instance through PuTTY.
+
+8. Change the EC2 instance name and detect drift.
+
+9. Change the EC2 instance name back and detect drift.
+
+10. Delete the stack.
+
+11. Create an EC2 instance and an S3 bucket through CloudFormation on the AWS console.
+- cloudformation-demo-main\demo_cf_02\template.yaml
+
+12. Update the stack so the S3 bucket has public read access.
+- cloudformation-demo-main\demo_cf_03\template.yaml
+
+13. Delete the stack.
+
+14. Create an EC2 instance using parameters and explore Design View through CloudFormation on the AWS console.
+- cloudformation-demo-main\demo_cf_04\template.yaml
+
+15. Delete the stack.
+
+16. Create a Management EC2 instance through CloudFormation on the AWS console and connect to it through PuTTY.
+- cloudformation-demo-main\environment\template.yaml
+
+17. Confirm AWS CLI access.
+- aws --version
+
+18. Configure AWS CLI and verify connectivity.
+- aws configure
+- aws cloudformation describe-stacks
+
+19. Clone the Git repository.
+- cd ~
+- git clone https://github.com/kevinbayliss/cloudformation-demo
+- cd cloudformation-demo
+- ls
+
+20. Create an EC2 instance through CloudFormation on the AWS CLI.
+- aws cloudformation create-stack --stack-name Demo --tags Key=Name,Value=Demo --template-body file://demo_cf_01/template.yaml
+
+21. Describe the CloudFormation stack.
+- aws cloudformation describe-stacks
+
+22. Delete the stack.
+- aws cloudformation delete-stack --stack-name Demo
+
+23. Close PuTTY and delete the Management stack through CloudFormation on the AWS console.
+
+24. Remove the SSH access rule from the default security group.
+
+25. Delete the security credentials through IAM on the AWS console.
+
+26. Delete the key pair named TU_Dublin on the AWS console.
+
+27. Delete any S3 buckets created by CloudFormation.

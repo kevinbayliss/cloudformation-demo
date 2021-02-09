@@ -1,0 +1,32 @@
+---
+Parameters:
+  AvailabilityZone:
+    Type: String
+    Default: eu-west-1a
+    AllowedValues:
+      - eu-west-1a
+      - eu-west-2a
+  InstanceType:
+    Type: String
+    Default: t2.micro
+    AllowedValues:
+      - t1.micro
+      - t2.micro
+  KeyName:
+    Type: AWS::EC2::KeyPair::KeyName
+    Default: TU_Dublin
+  ImageId:
+    Type: String
+    Default: ami-0bb3fad3c0286ebd5
+    AllowedValues:
+      - ami-0bb3fad3c0286ebd5
+      - ami-0a669382ea0feb73a
+
+Resources:
+  TUDublinEC2Instance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      AvailabilityZone: !Ref AvailabilityZone
+      InstanceType: !Ref InstanceType
+      KeyName: !Ref KeyName
+      ImageId: !Ref ImageId

@@ -1,0 +1,9 @@
+---
+Resources:
+  TUDublinEC2Instance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      AvailabilityZone: eu-west-1a
+      InstanceType: t2.micro
+      KeyName: TU_Dublin
+      ImageId: ami-0bb3fad3c0286ebd5
