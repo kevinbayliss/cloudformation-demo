@@ -1,0 +1,61 @@
+1. Login to the AWS Academy Learner Lab and start lab.
+
+2. Download and unzip the Git repository.
+- https://github.com/kevinbayliss/cloudformation-demo
+
+3. Create and open a Cloud9 environment with a Secure Shell (SSH) connection type.
+
+4. Clone the Git repository.
+- git clone https://github.com/kevinbayliss/cloudformation-demo
+
+5. Create an EC2 instance through CloudFormation on the AWS console.
+- cloudformation-demo-main\demo_cf_01\template.yaml
+
+6. Add an SSH access rule to the default security group.
+
+7. Connect to the EC2 instance through EC2 Instance Connect.
+
+8. Change the EC2 instance name and detect drift.
+
+9. Change the EC2 instance name back and detect drift.
+
+10. Delete the stack.
+
+11. Create an EC2 instance and an S3 bucket through CloudFormation on the AWS console.
+- cloudformation-demo-main\demo_cf_02\template.yaml
+
+12. Update the stack through CloudFormation on the AWS console so the EC2 instance is now named "Demo_Updated".
+- cloudformation-demo-main\demo_cf_03\template.yaml
+
+13. Delete the stack.
+
+14. Create an EC2 instance using parameters and explore Design View through CloudFormation on the AWS console.
+- cloudformation-demo-main\demo_cf_04\template.yaml
+
+15. Delete the stack.
+
+16. Open the Cloud9 environment.
+
+17. Confirm AWS CLI access.
+- aws --version
+
+18. Verify AWS CLI connectivity.
+- aws cloudformation describe-stacks
+  q
+
+19. Create an EC2 instance through CloudFormation on the AWS CLI.
+- cd cloudformation-demo && ls
+- aws cloudformation create-stack --stack-name Demo --tags Key=Name,Value=Demo --template-body file://demo_cf_01/template.yaml
+
+20. Describe the CloudFormation stack.
+- aws cloudformation describe-stacks
+  q
+
+21. Delete the stack.
+- aws cloudformation delete-stack --stack-name Demo
+
+22. Close and delete the Cloud9 environment.
+
+23. Remove the SSH access rule from the default security group.
+
+24. End Lab and logout of the AWS Academy Learner Lab.
