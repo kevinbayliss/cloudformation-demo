@@ -29,7 +29,7 @@
 
 13. Delete the stack.
 
-14. Create an EC2 instance using parameters and explore Design View through CloudFormation on the AWS console.
+14. Create an EC2 instance using parameters and explore Application Composer through CloudFormation on the AWS console.
 - cloudformation-demo-main\demo_cf_04\template.yaml
 
 15. Delete the stack.
